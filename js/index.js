@@ -9,9 +9,6 @@ function setTheme(num) {
     $('input,table,th,td').css('backgroundColor','yellow')
   }
 }
-$('.view').on('click',()=>{
-  $('tr').last().remove();
-});
 $(document).ready(()=>{
 
   let columns = 3;
@@ -33,6 +30,7 @@ $(document).ready(()=>{
     if (themeInd == -1) {
       themeInd = maxThemes;
     }
+    setTheme(themeInd);
     $('.theme').attr({src:'img/Theme'+themeInd+'.png',onclick:'setTheme('+themeInd+')'})
   });
   $('.button_right').on('click',()=>{
@@ -40,6 +38,7 @@ $(document).ready(()=>{
     if (themeInd == maxThemes+1) {
       themeInd = 0;
     }
+    setTheme(themeInd);
     $('.theme').attr({src:'img/Theme'+themeInd+'.png',onclick:'setTheme('+themeInd+')'})
   });
   $('.Darktheme').on('click',()=>{

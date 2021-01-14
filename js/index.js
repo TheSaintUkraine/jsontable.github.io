@@ -85,9 +85,7 @@ $(document).ready(()=>{
   }
   function add_row() {
     colum_html = '';
-    if (onload == false) {
-      rows++;
-    }
+    rows++;
     for (var i = 0; i < columns; i++) {
       colum_html+='<td><input type="text"></td>';
     }
